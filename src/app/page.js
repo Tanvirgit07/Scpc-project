@@ -1,4 +1,5 @@
 import DemoCarousel from "@/Components/Carousel/DemoCarousel";
+import Discount from "@/Components/Discount/Discount";
 import Menu from "@/Components/MenuSection/Menu";
 import Navbar from "@/Components/Navbar/Navbar";
 import NewProducts from "@/Components/NewProducts/NewProducts";
@@ -21,6 +22,9 @@ export default function Home() {
       </div>
       <div>
         <NewProducts></NewProducts>
+      </div>
+      <div>
+        <Discount></Discount>
       </div>
     </div>
   );
