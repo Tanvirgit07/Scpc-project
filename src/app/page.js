@@ -1,6 +1,8 @@
+import BestSell from "@/Components/BestSell/BestSell";
 import DemoCarousel from "@/Components/Carousel/DemoCarousel";
 import Discount from "@/Components/Discount/Discount";
 import Feedback from "@/Components/Feedback/Feedback";
+import Footer from "@/Components/Footer/Footer";
 import Menu from "@/Components/MenuSection/Menu";
 import Navbar from "@/Components/Navbar/Navbar";
 import NewProducts from "@/Components/NewProducts/NewProducts";
@@ -34,6 +36,12 @@ export default function Home() {
       </div>
       <div>
         <Feedback></Feedback>
+      </div>
+      <div>
+        <BestSell></BestSell>
+      </div>
+      <div>
+        <Footer></Footer>
       </div>
     </div>
   );
