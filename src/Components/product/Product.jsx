@@ -1,4 +1,5 @@
 import React from "react";
+import { HiOutlinePlus } from "react-icons/hi";
 
 const products = [
   {
@@ -145,10 +146,14 @@ const Product = () => {
             <div className="card-body">
               <h2 className="card-title">{aProduct.name}</h2>
               <p>{aProduct.description}</p>
-              <p className="font-bold">Price: ${aProduct.price}</p>
-              <p>Rating: {aProduct.rating} ⭐</p>
+              <div className="flex justify-between">
+                <p className="font-bold">Price: ${aProduct.price}</p>
+                <p className="font-bold">Rating: {aProduct.rating} ⭐</p>
+              </div>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
+                <div className="bg-blue-600 p-3 rounded-full">
+                  <HiOutlinePlus className="text-2xl font-bold text-white"/>
+                </div>
               </div>
             </div>
           </div>

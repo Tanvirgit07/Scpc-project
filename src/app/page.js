@@ -2,9 +2,9 @@ import BestSell from "@/Components/BestSell/BestSell";
 import DemoCarousel from "@/Components/Carousel/DemoCarousel";
 import Discount from "@/Components/Discount/Discount";
 import Feedback from "@/Components/Feedback/Feedback";
-import Footer from "@/Components/Footer/Footer";
+// import Footer from "@/Components/Footer/Footer";
 import Menu from "@/Components/MenuSection/Menu";
-import Navbar from "@/Components/Navbar/Navbar";
+// import Navbar from "@/Components/Navbar/Navbar";
 import NewProducts from "@/Components/NewProducts/NewProducts";
 import Product from "@/Components/product/product";
 import Recommended from "@/Components/Recommended/Recommended";
@@ -12,9 +12,9 @@ import Recommended from "@/Components/Recommended/Recommended";
 export default function Home() {
   return (
     <div className="container mx-auto">
-      <div>
+      {/* <div>
         <Navbar></Navbar>
-      </div>
+      </div> */}
       <div className="">
         <DemoCarousel></DemoCarousel>
       </div>
@@ -40,9 +40,9 @@ export default function Home() {
       <div>
         <Feedback></Feedback>
       </div>
-      <div>
+      {/* <div>
         <Footer></Footer>
-      </div>
+      </div> */}
     </div>
   );
 }

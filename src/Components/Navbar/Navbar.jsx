@@ -1,8 +1,12 @@
+"use client";
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const pathName = usePathname();
   return (
     <div className="navbar">
       <div className="navbar-start">
@@ -28,13 +32,40 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a>Home</a>
+              <Link
+                href="/home"
+                className={`${
+                  pathName === "/home"
+                    ? "text-green-400 border-b-2 border-green-400"
+                    : ""
+                }`}
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <a>All Products</a>
+              <Link
+                href={"/allProducts"}
+                className={`${
+                  pathName === "/allProducts"
+                    ? "text-green-400 border-b-2 border-green-400"
+                    : "font-bold text-lg"
+                }`}
+              >
+                All Products
+              </Link>
             </li>
             <li>
-              <a>History</a>
+              <Link
+                href={"/history"}
+                className={`${
+                  pathName === "/history"
+                    ? "text-green-400 border-b-2 border-green-400"
+                    : "font-bold text-lg"
+                }`}
+              >
+                History
+              </Link>
             </li>
           </ul>
         </div>
@@ -45,22 +76,49 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu-horizontal px-1 gap-8">
           <li>
-            <a>Home</a>
+            <Link
+              href="/home"
+              className={`${
+                pathName === "/home"
+                  ? "text-green-400 border-b-2 border-green-400 font-bold"
+                  : "font-bold text-lg"
+              }`}
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <a>All Products</a>
+            <Link
+              href={"/allProducts"}
+              className={`${
+                pathName === "/allProducts"
+                  ? "text-green-400 border-b-2 border-green-400 font-bold"
+                  : "font-bold text-lg"
+              }`}
+            >
+              All Products
+            </Link>
           </li>
           <li>
-            <a>History</a>
+            <Link
+              href={"/history"}
+              className={`${
+                pathName === "/history"
+                  ? "text-green-400 border-b-2 border-green-400 font-bold text-lg"
+                  : "font-bold text-lg"
+              }`}
+            >
+              History
+            </Link>
           </li>
         </ul>
       </div>
       <div className="navbar-end gap-7">
         <div>
-          <CiSearch className="text-3xl font-semibold"/>
+          <CiSearch className="text-3xl font-semibold" />
         </div>
         <div>
-          <FaShoppingCart className="text-3xl font-semibold "/>
+          <FaShoppingCart className="text-3xl font-semibold " />
         </div>
 
         <div className="dropdown dropdown-end">
@@ -78,7 +136,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm z-10 dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm z-10 dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow"
           >
             <li>
               <a className="justify-between">
