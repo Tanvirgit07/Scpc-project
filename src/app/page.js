@@ -32,13 +32,13 @@ export default function Home() {
         <Discount></Discount>
       </div>
       <div>
+        <BestSell></BestSell>
+      </div>
+      <div>
         <NewProducts></NewProducts>
       </div>
       <div>
         <Feedback></Feedback>
-      </div>
-      <div>
-        <BestSell></BestSell>
       </div>
       <div>
         <Footer></Footer>

@@ -2,3 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.antialiased {
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+  }
+  
+  /* You can override variable-generated classes with the following */
+  [class*="__variable_"] {
+    all: unset;
+  }
+  
